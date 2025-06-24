@@ -1,0 +1,162 @@
+body {
+    background: #f3f6fb;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.todo-wrapper {
+    background: #fff;
+    padding: 20px 12px;
+    border-radius: 10px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+    width: 100%;
+    max-width: 400px;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 16px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.input-section {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+}
+
+input[type="text"] {
+    flex: 1 1 120px;
+    min-width: 0;
+    padding: 8px 10px;
+    border-radius: 5px;
+    border: 1px solid #cfd8dc;
+    font-size: 15px;
+    outline: none;
+    background: #f7fafc;
+    transition: border 0.2s;
+}
+
+input[type="text"]:focus {
+    border: 1.5px solid #1976d2;
+    background: #fff;
+}
+
+.add-btn, .delall-btn {
+    padding: 8px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    background: #1976d2;
+    color: #fff;
+    transition: background 0.2s;
+    font-weight: 500;
+    min-width: 80px;
+}
+
+.add-btn:hover {
+    background: #1565c0;
+}
+
+.delall-btn {
+    background: #e53935;
+}
+
+.delall-btn:hover {
+    background: #b71c1c;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    background: #f7fafc;
+    margin-bottom: 8px;
+    padding: 9px 8px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 15px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+    word-break: break-word;
+}
+
+li .actions {
+    display: flex;
+    gap: 4px;
+}
+
+li button {
+    border: none;
+    border-radius: 4px;
+    padding: 5px 9px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+li .edit-btn {
+    background: greenyellow;
+    color: #333;
+}
+
+
+
+li .delete-btn {
+    background: red;
+    color: #fff;
+}
+
+
+
+@media (max-width: 480px) {
+    body {
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .todo-wrapper {
+        padding: 10px 2vw;
+        max-width: 100vw;
+        min-width: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    h1 {
+        font-size: 1rem;
+    }
+    .input-section {
+        flex-direction: column;
+        gap: 6px;
+    }
+    input[type="text"], .add-btn, .delall-btn {
+        width: 100%;
+        font-size: 14px;
+        min-width: 0;
+    }
+    li {
+        font-size: 14px;
+        padding: 8px 5px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+    li .actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
+}
